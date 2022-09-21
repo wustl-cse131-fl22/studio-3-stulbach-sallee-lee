@@ -26,12 +26,11 @@ public class Sieve {
 		*/
 		
 		boolean[] a = new boolean[n];
-		for (int i = 2; i < n; i++)
+		for (int b = 2; b < n; b++)
 		{
-			a[i] = true;
+			a[b] = true;
 		}
-		
-		int comp = 0; 
+		 
 		
 		for (int i = 2; i < Math.sqrt(n); i++)
 		{
@@ -40,7 +39,6 @@ public class Sieve {
 				for (int j = i * i; j < n; j = j + i)
 				{
 					a[j] = false;
-					comp++;
 				}
 			}
 		}
